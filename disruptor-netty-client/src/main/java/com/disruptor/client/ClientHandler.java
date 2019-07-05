@@ -18,7 +18,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                     + ", name= " + response.getName()
                     + ", message= " + response.getMessage());
         } finally {
-            ReferenceCountUtil.release(msg); hh
+            ReferenceCountUtil.release(msg);
         }*/
         TranlatorData response = (TranlatorData)msg;
         MessageProducer producer = RingBufferWorkerFactory.getInstance().getMessageProducer("comsumer:" + UUID.randomUUID());
